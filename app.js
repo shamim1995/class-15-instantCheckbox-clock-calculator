@@ -69,26 +69,104 @@ function timeDiff(time, current) {
  */
 
 let cal_arr = [];
+function getcal(val) {
 
-let getcal = (val)=>{
   cal_arr.push(val)
-  document.querySelector('.first_display').innerHTML=cal_arr.join('');
+
+  document.querySelector('.first_display').innerHTML = cal_arr.join('')
+  
 }
 
 let allclear = () => {
-
-  cal_arr = [];
+   cal_arr = [];
   document.querySelector('.first_display').innerHTML = 0;
-  document.querySelector('.second_display').innerHTML = 0
+  document.querySelector('.second_display').innerHTML = 0;
 }
+
 let cancel = () => {
+
   cal_arr.pop();
-  document.querySelector('.first_display').innerHTML = cal_arr.join('');
+  document.querySelector('.first_display').innerHTML = cal_arr.join('')
+  document.querySelector('.second_display').innerHTML = 0;
+
+}
+
+let finalresult = ()=> {
+
+  let calValue = cal_arr.join('');
+
+  document.querySelector('.second_display').innerHTML = eval(calValue);
+  getcal(val)
 }
 
 
 
-let finalresult = () => {
-  let call_value = cal_arr.join('');
-  document.querySelector('.second_display').innerHTML = eval(call_value)
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let cal_arr = [];
+
+// let getcal = (val)=>{
+//   cal_arr.push(val)
+//   document.querySelector('.first_display').innerHTML=cal_arr.join('');
+// }
+
+// let allclear = () => {
+
+//   cal_arr = [];
+//   document.querySelector('.first_display').innerHTML = 0;
+//   document.querySelector('.second_display').innerHTML = 0
+// }
+// let cancel = () => {
+//   cal_arr.pop();
+//   document.querySelector('.first_display').innerHTML = cal_arr.join('');
+// }
+
+
+
+// let finalresult = () => {
+//   let call_value = cal_arr.join('');
+//   document.querySelector('.second_display').innerHTML = eval(call_value)
+// }
