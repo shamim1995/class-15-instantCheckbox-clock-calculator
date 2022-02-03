@@ -85,9 +85,15 @@ let allclear = () => {
 
 let cancel = () => {
 
-  cal_arr.pop();
-  document.querySelector('.first_display').innerHTML = cal_arr.join('')
-  document.querySelector('.second_display').innerHTML = 0;
+  if(cal_arr.length > 1){
+cal_arr.pop();
+document.querySelector('.first_display').innerHTML = cal_arr.join('')
+document.querySelector('.second_display').innerHTML = 0;
+  }else{
+    document.querySelector('.first_display').innerHTML = 0;
+  }
+
+  
 
 }
 
@@ -100,73 +106,3 @@ let finalresult = ()=> {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let cal_arr = [];
-
-// let getcal = (val)=>{
-//   cal_arr.push(val)
-//   document.querySelector('.first_display').innerHTML=cal_arr.join('');
-// }
-
-// let allclear = () => {
-
-//   cal_arr = [];
-//   document.querySelector('.first_display').innerHTML = 0;
-//   document.querySelector('.second_display').innerHTML = 0
-// }
-// let cancel = () => {
-//   cal_arr.pop();
-//   document.querySelector('.first_display').innerHTML = cal_arr.join('');
-// }
-
-
-
-// let finalresult = () => {
-//   let call_value = cal_arr.join('');
-//   document.querySelector('.second_display').innerHTML = eval(call_value)
-// }
